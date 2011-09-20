@@ -60,7 +60,7 @@ DOM Core
 ### Event
 
 That section corresponds to
-[DOM Level 2 Events] [http://www.w3.org/TR/DOM-Level-2-Events/events.html].
+[DOM Level 2 Events](http://www.w3.org/TR/DOM-Level-2-Events/events.html).
 
 The `Event` interface contains:
 
