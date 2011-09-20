@@ -50,15 +50,15 @@ EcmaScript Sixth Edition
 
 - modules:
     
-      module math {
-        export function sum(x, y) {
-          return x + y;
+        module math {
+          export function sum(x, y) {
+            return x + y;
+          }
+          export var pi = 3.141593;
         }
-        export var pi = 3.141593;
-      }
 
-      import {sum, pi} from math;
-      alert(sum(pi,pi));
+        import {sum, pi} from math;
+        alert(sum(pi,pi));
 
 - quasis: multiline, substitution-ready strings with extensibility.
   `` `You are ${age} years old.` ``.
