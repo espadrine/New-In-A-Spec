@@ -36,16 +36,18 @@ EcmaScript Sixth Edition
 
 - class syntax, with `extends`, `prototype`, and `super`:
 
-        class Point {
+        class Point extends Base {
           constructor(x,y) {
-            private x = x;
-            private y = y;
-            public closed_r() { return Math.sqrt(x*x + y*y); }
+            super();
+            this[px] = x, this[py] = y;
+            this.r = function() { return Math.sqrt(x*x + y*y); }
           }
-          get x() { return @x; }
-          get y() { return @y; }
-          equals(p) { return @x === p@x && @y === p@y; }
-          proto_r() { return Math.sqrt(@x*@x + @y*@y); }
+          get x() { return this[px]; }
+          get y() { return this[py]; }
+          proto_r() { return Math.sqrt(this[px] * this[px] +
+              this[py] * this[py]); }
+          equals(p) { return this[px] === p[px] &&
+              this[py] === p[py]; }
         }
 
 - modules:
