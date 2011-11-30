@@ -6,6 +6,7 @@ specs=". dom4 es6 xhr2"
 # Thanks! I'll do that.
 
 git checkout gh-pages
+git merge master
 
 for spec in $specs
 do
