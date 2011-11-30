@@ -10,7 +10,7 @@ git merge master
 
 for spec in $specs
 do
-  cat Readme.md | Markdown.pl > "$spec/index.html"
+  cat "$spec/Readme.md" | Markdown.pl > "$spec/index.html"
   git add "$spec/index.html"
 done
 
