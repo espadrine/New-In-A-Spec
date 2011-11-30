@@ -1,6 +1,10 @@
 What's New in A Spec
 ====================
 
+- [dom4](./dom4)
+- [es6](./es6)
+- [xhr2](./xhr2)
+
 We list the new stuff that comes with more recent specifications, relative to
 the previous version (whatever "version" means nowadays).
 
