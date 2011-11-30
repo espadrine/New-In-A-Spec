@@ -5,8 +5,8 @@ specs=". dom4 es6 xhr2"
 
 # Thanks! I'll do that.
 
-git checkout gh-pages
-git merge master
+git checkout gh-pages || exit
+git merge master || exit
 
 for spec in $specs
 do
