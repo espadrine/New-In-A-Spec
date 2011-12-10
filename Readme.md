@@ -2,6 +2,7 @@ What's New in A Spec
 ====================
 
 - [dom4](./dom4)
+- [es5](./es5)
 - [es6](./es6)
 - [xhr2](./xhr2)
 
