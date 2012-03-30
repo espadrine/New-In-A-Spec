@@ -1,6 +1,7 @@
 What's New in A Spec
 ====================
 
+- [html5](./html5)
 - [dom4](./dom4)
 - [es5](./es5)
 - [es6](./es6)
