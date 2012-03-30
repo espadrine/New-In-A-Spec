@@ -10,7 +10,9 @@ git merge master || exit
 
 for spec in $specs
 do
-  cat "$spec/Readme.md" | Markdown.pl > "$spec/index.html"
+  if [[ -e "$spec/Readme.md" ]]; then
+    cat "$spec/Readme.md" | Markdown.pl > "$spec/index.html"
+  fi
   git add "$spec/index.html"
 done
 
