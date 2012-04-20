@@ -99,9 +99,9 @@ What does it do?
 
 # Worth noting
 
-- All this is implemented in all browsers (yes, IE included ^^).
-- If you want to support IE6, there is
-  a [polyfills for that](http://github.com/kriskowal/es5-shim)!
+- All this is implemented in all browsers (including IE from version 9 up).
+- If you want to support older IE versions, there are
+  [polyfills for that](http://github.com/kriskowal/es5-shim)!
 
 Standard available [at
 ECMA](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf).
