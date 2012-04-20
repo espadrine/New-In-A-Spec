@@ -12,10 +12,12 @@ for spec in $specs
 do
   if [[ -e "$spec/Readme.md" ]]; then
     cat header.html > "$spec/index.html"
-    cat "$spec/Readme.md" | Markdown.pl >> "$spec/index.html"
+    cat "$spec/Readme.md" | Markdown.pl \
+      | sed "s,https://github.com/espadrine/New-In-A-Spec/tree/master,.," \
+      >> "$spec/index.html"
   fi
-  git add "$spec/index.html"
 done
+  git add "$spec/index.html"
 
 git commit -am"I luv publishing stuff on github ❤ !"
 git push origin gh-pages

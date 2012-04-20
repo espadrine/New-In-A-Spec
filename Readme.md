@@ -1,11 +1,11 @@
 What's New In A Spec
 ====================
 
-- [html5](./html5)
-- [dom4](./dom4)
-- [es5](./es5)
-- [es6](./es6)
-- [xhr2](./xhr2)
+- [HTML5](https://github.com/espadrine/New-In-A-Spec/tree/master/html5)
+- [DOM4](https://github.com/espadrine/New-In-A-Spec/tree/master/dom4)
+- [ES5](https://github.com/espadrine/New-In-A-Spec/tree/master/es5)
+- [ES6](https://github.com/espadrine/New-In-A-Spec/tree/master/es6)
+- [XHR2](https://github.com/espadrine/New-In-A-Spec/tree/master/xhr2)
 
 We list all new stuff that comes with more recent specifications, relative to
 the previous version (whatever "version" means nowadays).
