@@ -4,57 +4,57 @@ EcmaScript Fifth Edition
 
 # Object methods
 
-- `Object.getOwnPropertyDescriptor(obj, prop)`:
-  a property has either a `value` and three boolean attributes `writable`,
-  `enumerable` and `configurable`, or a `get`-ter and a `set`-ter.
+`Object.getOwnPropertyDescriptor(obj, prop)`:
+a property has either a `value` and three boolean attributes `writable`,
+`enumerable` and `configurable`, or a `get`-ter and a `set`-ter.
 
-      {
-        value: "foo",
-        writable: true,     // You can modify the value.
-        enumerable: true,   // Will appear in a "for (var i in obj.prop)".
-        configurable: true  // You can change "writable", "enumerable" and
-                            // "configurable"
-      }
+    {
+      value: "foo",
+      writable: true,     // You can modify the value.
+      enumerable: true,   // Will appear in a "for (var i in obj.prop)".
+      configurable: true  // You can change "writable", "enumerable" and
+                          // "configurable"
+    }
 
-- `Object.defineProperty(obj, prop, desc)`: set the property descriptor (as seen
-  above).
+`Object.defineProperty(obj, prop, desc)`: set the property descriptor (as seen
+above).
 
-      Object.defineProperty(obj, 'answer', {
-        get: function() { return 42; },
-        set: function() { throw Error('Truth is immutably 42'); }
-      });
+    Object.defineProperty(obj, 'answer', {
+      get: function() { return 42; },
+      set: function() { throw Error('Truth is immutably 42'); }
+    });
 
-- `Object.defineProperties(obj, props)`: same as above.
+`Object.defineProperties(obj, props)`: same as above.
+
+    Object.defineProperties(obj, {
+      'prop1': {value: 1337, writable: false},
+      'prop2': {value: 666, enumerable: false}
+    });
+
+`Object.keys(obj)`: array of strings of all enumerable properties.
+
+`Object.getOwnPropertyNames(obj)`: array of strings of all properties
+(including non-enumerable ones).
+
+`Object.create(proto, props)`: inherit a new object from the object `proto`.
   
-      Object.defineProperties(obj, {
-        'prop1': {value: 1337, writable: false},
-        'prop2': {value: 666, enumerable: false}
-      });
+    var mum = Object.create({}, {common: {value:5}, overriden: {value:7}});
+    var baby = Object.create(mum, {overriden: {value:8}});
 
-- `Object.keys(obj)`: array of strings of all enumerable properties.
+`Object.getPrototypeOf(obj)`: self-descriptive.
 
-- `Object.getOwnPropertyNames(obj)`: array of strings of all properties
-  (including non-enumerable ones).
+`Object.preventExtensions(obj)`: now you can't add properties to `obj`.
 
-- `Object.create(proto, props)`: inherit a new object from the object `proto`.
-    
-      var mum = Object.create({}, {common: {value:5}, overriden: {value:7}});
-      var baby = Object.create(mum, {overriden: {value:8}});
+`Object.isExtensible(obj)`
 
-- `Object.getPrototypeOf(obj)`: self-descriptive.
+`Object.seal(obj)`: now you can't delete or add any properties, and you can't
+change their descriptors (but you can change their values).
 
-- `Object.preventExtensions(obj)`: now you can't add properties to `obj`.
+`Object.isSealed(obj)`
 
-- `Object.isExtensible(obj)`
+`Object.freeze(obj)`: now you can't delete, add, or change any property.
 
-- `Object.seal(obj)`: now you can't delete or add any properties, and you can't
-  change their descriptors (but you can change their values).
-
-- `Object.isSealed(obj)`
-
-- `Object.freeze(obj)`: now you can't delete, add, or change any property.
-
-- `Object.isFrozen(obj)`
+`Object.isFrozen(obj)`
 
 
 # Array awesomeness
