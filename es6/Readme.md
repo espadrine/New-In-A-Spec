@@ -14,7 +14,8 @@ EcmaScript Sixth Edition
 
 - spread: `let a = [0,1,2,3],  o = new Something(...a);`
 
-- fat arrow: `(a) => a * a` is the same as `function(a) { return a * a; }`
+- fat arrow: `(a) => a * a` is the same as
+  `(function(a) { return a * a; }).bind(this)`
 
 - map, set: `let m = new Map(); m.set(key, value); m.has(key); m.get(key)`.
   Also has `.clear()`, `.delete()`, `.forEach()`, `.keys()`.
