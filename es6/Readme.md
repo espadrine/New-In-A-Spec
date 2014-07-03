@@ -30,6 +30,9 @@ EcmaScript Sixth Edition
     chain them) in `promise.then(value => {…})`.
   * `reject(new Error(…))` breaks the promise in
     `promise.then(…).then(…).catch(error => {…})`.
+  * Quick promise creation: `Promise.resolve(value)`, `Promise.reject(error)`.
+  * Iterables: `Promise.all(listOfPromises).then(listOfValues => …)`,
+    `Promise.race(listOfPromises).then(valueThatResolvedFirst => …)`
 
 - generators: `function* gen()  { yield 1; yield 2; }`
   Actually, `gen()` returns ~ an object with a `next()` function property.
