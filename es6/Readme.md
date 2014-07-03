@@ -29,7 +29,7 @@ EcmaScript Sixth Edition
   * `resolve(valueOrPromise)` returns the promised value (or a new promise, to
     chain them) in `promise.then(value => {…})`.
   * `reject(new Error(…))` breaks the promise in
-    `promise.then(…).catch(error => {…})`.
+    `promise.then(…).then(…).catch(error => {…})`.
 
 - generators: `function* gen()  { yield 1; yield 2; }`
   Actually, `gen()` returns ~ an object with a `next()` function property.
