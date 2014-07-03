@@ -42,8 +42,8 @@ EcmaScript Sixth Edition
   Iterators can be generators or proxies.
 
 - array and generator comprehension:
-  `[a+b for (a in A) for (b in B)]` (array comprehension),
-  `(x for (x of generateValues()) if (x.color === 'blue'))` (generator
+  `[for (a of A) for (b of B) a+b]` (array comprehension),
+  `(for (x of generateValues()) if (x.color === 'blue') x)` (generator
   expression).
 
 - binary data: `const Pixel = new StructType({x:uint32, y:uint32, color:Color})`
