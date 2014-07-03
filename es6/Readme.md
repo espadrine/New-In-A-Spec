@@ -17,7 +17,7 @@ EcmaScript Sixth Edition
 - proxies: `let obj = Proxy.create(handler, proto)`.
   Long story short: ~ operator overloading with object-like elements.
 
-- Map, set: `let m = new Map(); m.set(key, value); m.has(key); m.get(key)`.
+- map, set: `let m = new Map(); m.set(key, value); m.has(key); m.get(key)`.
   Also has `.clear()`, `.delete()`, `.forEach()`, `.keys()`.
 
 - weak map: `let map = new WeakMap`.
