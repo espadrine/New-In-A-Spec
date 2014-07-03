@@ -16,9 +16,6 @@ EcmaScript Sixth Edition
 
 - fat arrow: `(a) => a * a` is the same as `function(a) { return a * a; }`
 
-- proxies: `let obj = Proxy.create(handler, proto)`.
-  Long story short: ~ operator overloading with object-like elements.
-
 - map, set: `let m = new Map(); m.set(key, value); m.has(key); m.get(key)`.
   Also has `.clear()`, `.delete()`, `.forEach()`, `.keys()`.
 
@@ -33,6 +30,9 @@ EcmaScript Sixth Edition
   * Quick promise creation: `Promise.resolve(value)`, `Promise.reject(error)`.
   * Iterables: `Promise.all(listOfPromises).then(listOfValues => …)`,
     `Promise.race(listOfPromises).then(valueThatResolvedFirst => …)`
+
+- proxies: `let obj = Proxy.create(handler, proto)`.
+  Long story short: ~ operator overloading with object-like elements.
 
 - generators: `function* gen()  { yield 1; yield 2; }`
   Actually, `gen()` returns ~ an object with a `next()` function property.
