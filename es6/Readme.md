@@ -14,14 +14,22 @@ EcmaScript Sixth Edition
 
 - spread: `let a = [0,1,2,3],  o = new Something(...a);`
 
+- fat arrow: `(a) => a * a` is the same as `function(a) { return a * a; }`
+
 - proxies: `let obj = Proxy.create(handler, proto)`.
   Long story short: ~ operator overloading with object-like elements.
 
 - map, set: `let m = new Map(); m.set(key, value); m.has(key); m.get(key)`.
   Also has `.clear()`, `.delete()`, `.forEach()`, `.keys()`.
 
-- weak map: `let map = new WeakMap`.
+- weak map: `let map = new WeakMap()`.
   Use it if you have circular references in it.
+
+- promise: `new Promise((resolve, reject) => {…})`.
+  * `resolve(valueOrPromise)` returns the promised value (or a new promise, to
+    chain them) in `promise.then(value => {…})`.
+  * `reject(new Error(…))` breaks the promise in
+    `promise.then(…).catch(error => {…})`.
 
 - generators: `function* gen()  { yield 1; yield 2; }`
   Actually, `gen()` returns ~ an object with a `next()` function property.
