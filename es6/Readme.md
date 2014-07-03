@@ -77,6 +77,7 @@ EcmaScript Sixth Edition
 - - -
 
 Specification: <http://people.mozilla.org/~jorendorff/es6-draft.html>
+
 Proposals: <http://wiki.ecmascript.org/doku.php?id=harmony:proposals>
 
 Thanks [Brendan Eich](http://brendaneich.com/), Allen Wirfs-Brock, Douglas
