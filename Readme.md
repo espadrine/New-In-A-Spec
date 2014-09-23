@@ -5,6 +5,7 @@ What's New In A Spec
 - [DOM4](https://github.com/espadrine/New-In-A-Spec/tree/master/dom4)
 - [ES5](https://github.com/espadrine/New-In-A-Spec/tree/master/es5)
 - [ES6](https://github.com/espadrine/New-In-A-Spec/tree/master/es6)
+- [ES7](https://github.com/espadrine/New-In-A-Spec/tree/master/es7)
 - [XHR2](https://github.com/espadrine/New-In-A-Spec/tree/master/xhr2)
 
 We list all new stuff that comes with more recent specifications, relative to

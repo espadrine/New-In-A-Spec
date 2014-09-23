@@ -12,7 +12,11 @@ EcmaScript Sixth Edition
 - rest: `function g(i, j, ...r)  { return r.slice(i, j); }`
   (instead of using `arguments` like a madman).
 
-- spread: `let a = [0,1,2,3],  o = new Something(...a);`
+- spread: `let a = [0,1,2,3],  o = new Something(...a);`. Also works in array
+  literals: `[1, ...array, 4]`.
+
+- Shorthand object literals: `let one = 1; { one, func_one() {return 1;}, ['key '
+  + one]: 1 }`.
 
 - fat arrow: `(a) => a * a` is the same as
   `(function(a) { return a * a; }).bind(this)`
@@ -22,6 +26,7 @@ EcmaScript Sixth Edition
 
 - weak map: `let map = new WeakMap()`.
   Use it if you have circular references in it.
+  You also have `new WeakSet()`.
 
 - promise: `new Promise((resolve, reject) => {…})`.
   * `resolve(valueOrPromise)` returns the promised value (or a new promise, to
@@ -32,8 +37,9 @@ EcmaScript Sixth Edition
   * Iterables: `Promise.all(listOfPromises).then(listOfValues => …)`,
     `Promise.race(listOfPromises).then(valueThatResolvedFirst => …)`
 
-- proxies: `let obj = Proxy.create(handler, proto)`.
+- proxies: `let obj = new Proxy(proto, handler)`.
   Long story short: ~ operator overloading with object-like elements.
+  (Can also catch all property accesses on an object.)
 
 - generators: `function* gen()  { yield 1; yield 2; }`
   Actually, `gen()` returns ~ an object with a `next()` function property.
@@ -41,16 +47,8 @@ EcmaScript Sixth Edition
 - iterators: `for (var [key, val] of items(x))  { alert(key + ',' + val); }`.
   Iterators can be generators or proxies.
 
-- array and generator comprehension:
-  `[for (a of A) for (b of B) a+b]` (array comprehension),
-  `(for (x of generateValues()) if (x.color === 'blue') x)` (generator
-  expression).
-
-- binary data: `const Pixel = new StructType({x:uint32, y:uint32, color:Color})`
-  (if `Color` is itself a `StructType`), `new ArrayType(Pixel, 3)`.
-
-- class syntax, with `extends`, `prototype`, and `super`:
-
+- class syntax, with `extends`, `super`, and `static`:
+        
         class Point extends Base {
           constructor(x,y) {
             super();
@@ -65,6 +63,17 @@ EcmaScript Sixth Edition
               this[py] === p[py]; }
         }
 
+- Symbols generate unique inaccessible keys, useful in maps and classes (private
+  members).
+        
+        let a = Map();
+        {
+          let k = Symbol();
+          a.set(k, 'value');
+          // Here, we can get and reset 'value' as a.get(k).
+        }
+        // Here, a.get(k) is invalid, a.size is 1, but the key cannot be seen.
+
 - modules:
     
         module math {
@@ -77,7 +86,7 @@ EcmaScript Sixth Edition
         import {sum, pi} from math;
         alert(sum(pi,pi));
 
-- quasis: multiline, substitution-ready strings with extensibility.
+- template strings: multiline, substitution-ready strings with extensibility.
   `` `You are ${age} years old.` ``.
   
         // The following regexp spans multiple lines.
@@ -88,6 +97,9 @@ EcmaScript Sixth Edition
         re({raw:'line1: (words )*\nline2: \w+',
             cooked:'line1: (words )*\nline2: \w+'})
 
+- [Typed Array][]
+
+[Typed Array]: http://www.khronos.org/registry/typedarray/specs/latest/
 
 - - -
 
