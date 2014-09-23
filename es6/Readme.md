@@ -15,8 +15,8 @@ EcmaScript Sixth Edition
 - spread: `let a = [0,1,2,3],  o = new Something(...a);`. Also works in array
   literals: `[1, ...array, 4]`.
 
-- Shorthand object literals: `let one = 1; { one, func_one() {return 1;}, ['key '
-  + one]: 1 }`.
+- Shorthand object literals:
+  `let one = 1; { one, func_one() {return 1;}, ['key ' + one]: 1 }`.
 
 - fat arrow: `(a) => a * a` is the same as
   `(function(a) { return a * a; }).bind(this)`
