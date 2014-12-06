@@ -15,12 +15,13 @@ do
     cat "$spec/Readme.md" | commonmark \
       | sed "s,https://github.com/espadrine/New-In-A-Spec/tree/master,.," \
       >> "$spec/index.html"
+    git add "$spec/index.html"
   fi
 done
 git add "$spec/index.html"
 
 git commit -am"I luv publishing stuff on github ❤ !"
-git push origin gh-pages:gh-pages
+git push origin -f gh-pages:gh-pages
 
 git checkout master
 
