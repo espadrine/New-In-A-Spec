@@ -5,8 +5,8 @@ specs=". dom4 es5 es6 es7 xhr2 html5"
 
 # Thanks! I'll do that.
 
-git checkout gh-pages || exit
-git merge master || exit
+git branch -D gh-pages || exit
+git checkout -b gh-pages || exit
 
 for spec in $specs
 do
@@ -20,7 +20,7 @@ done
 git add "$spec/index.html"
 
 git commit -am"I luv publishing stuff on github ❤ !"
-git push origin gh-pages
+git push origin gh-pages:gh-pages
 
 git checkout master
 
