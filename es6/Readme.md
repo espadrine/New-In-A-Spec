@@ -48,7 +48,7 @@ EcmaScript Sixth Edition
   Iterators can be generators or proxies.
 
 - class syntax, with `extends`, `super`, and `static`:
-  ```js
+  ```javascript
   class Point extends Base {
     constructor(x,y) {
       super();
@@ -66,7 +66,7 @@ EcmaScript Sixth Edition
 
 - Symbols generate unique inaccessible keys, useful in maps and classes (private
   members).
-  ```js
+  ```javascript
   let a = Map();
   {
     let k = Symbol();
@@ -77,7 +77,7 @@ EcmaScript Sixth Edition
   ```
 
 - modules:
-  ```js
+  ```javascript
   module math {
     export function sum(x, y) {
       return x + y;
@@ -91,7 +91,7 @@ EcmaScript Sixth Edition
 
 - template strings: multiline, substitution-ready strings with extensibility.
   `` `You are ${age} years old.` ``.
-  ```js
+  ```javascript
   // The following regexp spans multiple lines.
   re`line1: (words )*
   line2: \w+`
