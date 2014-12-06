@@ -48,54 +48,58 @@ EcmaScript Sixth Edition
   Iterators can be generators or proxies.
 
 - class syntax, with `extends`, `super`, and `static`:
-        
-        class Point extends Base {
-          constructor(x,y) {
-            super();
-            this[px] = x, this[py] = y;
-            this.r = function() { return Math.sqrt(x*x + y*y); }
-          }
-          get x() { return this[px]; }
-          get y() { return this[py]; }
-          proto_r() { return Math.sqrt(this[px] * this[px] +
-              this[py] * this[py]); }
-          equals(p) { return this[px] === p[px] &&
-              this[py] === p[py]; }
-        }
+  ```js
+  class Point extends Base {
+    constructor(x,y) {
+      super();
+      this[px] = x, this[py] = y;
+      this.r = function() { return Math.sqrt(x*x + y*y); }
+    }
+    get x() { return this[px]; }
+    get y() { return this[py]; }
+    proto_r() { return Math.sqrt(this[px] * this[px] +
+        this[py] * this[py]); }
+    equals(p) { return this[px] === p[px] &&
+        this[py] === p[py]; }
+  }
+  ```
 
 - Symbols generate unique inaccessible keys, useful in maps and classes (private
   members).
-        
-        let a = Map();
-        {
-          let k = Symbol();
-          a.set(k, 'value');
-          // Here, we can get and reset 'value' as a.get(k).
-        }
-        // Here, a.get(k) is invalid, a.size is 1, but the key cannot be seen.
+  ```js
+  let a = Map();
+  {
+    let k = Symbol();
+    a.set(k, 'value');
+    // Here, we can get and reset 'value' as a.get(k).
+  }
+  // Here, a.get(k) is invalid, a.size is 1, but the key cannot be seen.
+  ```
 
 - modules:
-    
-        module math {
-          export function sum(x, y) {
-            return x + y;
-          }
-          export var pi = 3.141593;
-        }
+  ```js
+  module math {
+    export function sum(x, y) {
+      return x + y;
+    }
+    export var pi = 3.141593;
+  }
 
-        import {sum, pi} from math;
-        alert(sum(pi,pi));
+  import {sum, pi} from math;
+  alert(sum(pi,pi));
+  ```
 
 - template strings: multiline, substitution-ready strings with extensibility.
   `` `You are ${age} years old.` ``.
+  ```js
+  // The following regexp spans multiple lines.
+  re`line1: (words )*
+  line2: \w+`
   
-        // The following regexp spans multiple lines.
-        re`line1: (words )*
-        line2: \w+`
-        
-        // It desugars to:
-        re({raw:'line1: (words )*\nline2: \w+',
-            cooked:'line1: (words )*\nline2: \w+'})
+  // It desugars to:
+  re({raw:'line1: (words )*\nline2: \w+',
+      cooked:'line1: (words )*\nline2: \w+'})
+  ```
 
 - [Typed Array][]
 
