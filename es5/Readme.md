@@ -8,28 +8,34 @@ EcmaScript Fifth Edition
 a property has either a `value` and three boolean attributes `writable`,
 `enumerable` and `configurable`, or a `get`-ter and a `set`-ter.
 
-    {
-      value: "foo",
-      writable: true,     // You can modify the value.
-      enumerable: true,   // Will appear in a "for (var i in obj.prop)".
-      configurable: true  // You can change "writable", "enumerable" and
-                          // "configurable"
-    }
+```javascript
+{
+  value: "foo",
+  writable: true,     // You can modify the value.
+  enumerable: true,   // Will appear in a "for (var i in obj.prop)".
+  configurable: true  // You can change "writable", "enumerable" and
+                      // "configurable"
+}
+```
 
 `Object.defineProperty(obj, prop, desc)`: set the property descriptor (as seen
 above).
 
-    Object.defineProperty(obj, 'answer', {
-      get: function() { return 42; },
-      set: function() { throw Error('Truth is immutably 42'); }
-    });
+```javascript
+Object.defineProperty(obj, 'answer', {
+  get: function() { return 42; },
+  set: function() { throw Error('Truth is immutably 42'); }
+});
+```
 
 `Object.defineProperties(obj, props)`: same as above.
 
-    Object.defineProperties(obj, {
-      'prop1': {value: 1337, writable: false},
-      'prop2': {value: 666, enumerable: false}
-    });
+```javascript
+Object.defineProperties(obj, {
+  'prop1': {value: 1337, writable: false},
+  'prop2': {value: 666, enumerable: false}
+});
+```
 
 `Object.keys(obj)`: array of strings of all enumerable properties.
 
@@ -37,9 +43,11 @@ above).
 (including non-enumerable ones).
 
 `Object.create(proto, props)`: inherit a new object from the object `proto`.
-  
-    var mum = Object.create({}, {common: {value:5}, overriden: {value:7}});
-    var baby = Object.create(mum, {overriden: {value:8}});
+
+```javascript
+var mum = Object.create({}, {common: {value:5}, overriden: {value:7}});
+var baby = Object.create(mum, {overriden: {value:8}});
+```
 
 `Object.getPrototypeOf(obj)`: self-descriptive.
 
@@ -75,7 +83,9 @@ change their descriptors (but you can change their values).
 How to use it?
 Write the following instruction:
 
-      "use strict";
+```javascript
+"use strict";
+```
 
 What does it do?
   
