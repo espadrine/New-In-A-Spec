@@ -23,3 +23,5 @@ var obj = { key: 'value' }
 var clone = Object.create(Object.getPrototypeOf(obj),
   Object.getOwnPropertyDescriptors(obj))
 ```
+
+[Full standard](https://tc39.github.io/ecma262/)
