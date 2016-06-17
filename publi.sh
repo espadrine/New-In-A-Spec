@@ -1,7 +1,7 @@
 #!/bin/bash --norc
 
 # Which specs do we want to publish?
-specs=". dom4 es5 es2015 es2016 es-next xhr2 html5"
+specs=". dom4 es5 es6 es2015 es2016 es2017 xhr2 html5"
 
 # Thanks! I'll do that.
 
