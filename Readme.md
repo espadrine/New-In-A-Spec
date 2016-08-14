@@ -8,6 +8,7 @@ What's New In A Spec
 - [ES 2016](https://github.com/espadrine/New-In-A-Spec/tree/master/es2016)
 - [ES 2017](https://github.com/espadrine/New-In-A-Spec/tree/master/es2017)
 - [XHR2](https://github.com/espadrine/New-In-A-Spec/tree/master/xhr2)
+- [SVG2](https://github.com/w3c/svgwg/wiki/SVG-2-new-features)
 
 We list all new stuff that comes with more recent specifications, relative to
 the previous version (whatever "version" means nowadays).
