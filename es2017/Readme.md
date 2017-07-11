@@ -1,5 +1,5 @@
-EcmaScript Seventh Edition
-==========================
+ECMAScript 2017
+===============
 
 - [Object.values](https://github.com/es-shims/Object.values) / [Object.entries](https://github.com/es-shims/Object.entries)
 
