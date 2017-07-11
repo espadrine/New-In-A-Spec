@@ -91,3 +91,5 @@ Atomics.isLockFree(size)
 ```
 
 [Full standard](https://tc39.github.io/ecma262/)
+
+[Submit an issue](https://github.com/espadrine/New-In-A-Spec/issues/new)
