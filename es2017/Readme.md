@@ -90,6 +90,8 @@ Atomics.wake(arrayBuf, index, numberOfWaitersToWakeUp)
 Atomics.isLockFree(size)
 ```
 
-[Full standard](https://tc39.github.io/ecma262/)
+[Full standard](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)
+
+[Latest version](https://tc39.github.io/ecma262/)
 
 [Submit an issue](https://github.com/espadrine/New-In-A-Spec/issues/new)
